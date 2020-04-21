@@ -1,0 +1,49 @@
+So, Here in this problem we have to seek or create any one string whose ' a ' length substring always contain ' b '  no. of distinct 
+digits. So we observe the fact that if we take a string like ' abcdefabcdef '  we have 5 length substring whichever you might take will contain 
+5 distinct digits so using this fact we would write our solution as .
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+  int n,i,a,b,t;
+  cin>>t;
+  while(t--)
+      {
+        cin>>n>>a>>b;
+        for(i=0;i<n;i++)
+          cout<<char(97+i%b);
+        cout<<endl;
+
+
+      }
+  return 0;
+}
+
+or by simple traditional method we can get on. 
+
+#include <bits/stdc++.h>
+typedef long long ll;
+using namespace std;
+ 
+int main()
+{
+    int t, n, a, b;
+    cin >> t;
+    while (t--)
+    {
+        cin >> n >> a >> b;
+        
+        string s = string(a - b + 1, 'a');
+        for (int i = 1; i <= b - 1; i++)
+        s += (char)('a' + i);
+        
+        int cnt = n / a;
+        for (int i = 1; i <= cnt; i++)
+        cout << s;
+        cout << s.substr(0, n % a);
+        cout << endl;
+    }
+}
+
+This solution is less intuitive and might confuse at first glance .
