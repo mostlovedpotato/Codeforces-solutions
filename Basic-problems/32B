@@ -1,0 +1,17 @@
+So in this problem which is quite easy relative to previous one just we have to substitue the corresponding code in that language lol.
+
+
+#include <iostream>
+#include<string>
+using namespace std;
+ 
+int main() {
+	string s1,s2="";
+	cin>>s1;
+	for(char *c=&s1[0];*c;c++)
+		if(*c=='.')
+			s2+="0";
+		else
+			s2+= (*++c=='.') ? "1" : "2";
+	cout<<s2;
+}
