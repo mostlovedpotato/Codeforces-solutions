@@ -1,0 +1,9 @@
+So as far as this problem is considered this is quite easy just basic mathematics that you want to cover the m*n area with a*a squares
+This you can do with simply writing ceil function like ceil(m/a)  and in simple with use of integers you can do that as below.
+
+#include<iostream>
+main()
+{int n,m,a;
+    std::cin>>n>>m>>a;
+    std::cout<<(n+a-1LL)/a*((m+a-1)/a);
+}
