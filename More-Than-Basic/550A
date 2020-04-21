@@ -1,0 +1,17 @@
+This is kinda basic problem but if not thought in the right direction might cost you much time to solve or write code for this .
+So basically we want to find the two substrings which are not overlapping so we will use the string find function here.
+String find function firstly we will check the position of the first string and then from the +2 position from that previous position 
+we will apply string find function again.so overall we have.
+https://www.geeksforgeeks.org/string-find-in-cpp/
+
+#include<iostream>
+using namespace std;
+int main(){
+	string s;
+	cin>>s;
+	if(s.find("AB")!=-1&&s.find("BA",s.find("AB")+2)!=-1 || s.find("BA")!=-1 && s.find("AB",s.find("BA")+2)!=-1)
+	  cout<<"YES";
+	else 
+    cout<<"NO";
+}
+ 
