@@ -1,0 +1,16 @@
+#include<iostream>
+#include<set>
+using namespace std;
+main()
+{
+    int n,t,i;
+    set<int>s;
+    cin>>n;
+    for(i=0;i<n;i++){
+    cin>>t;
+    s.insert(t);}
+    if(s.size()<2)
+        cout<<"NO";
+    else
+    cout<<*(++s.begin());
+}
