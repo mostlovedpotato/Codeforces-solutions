@@ -1,0 +1,36 @@
+Here we just have to see those elemenets or count those pairs which are unordered pairs actually who gives difference d 
+at most so we go simple looping in loop 
+like below
+
+
+#include<iostream>
+#include<vector>
+#include<algorithm>
+ 
+using namespace std;
+int main()
+{
+    vector<long long >v;
+    long long i,j,a,b,x,ctn=0;
+    cin>>a>>b;
+    for(i=0;i<a;i++)
+    {
+        cin>>x;
+        v.push_back(x);
+    }
+    sort(v.begin(),v.end());
+    for(i=0;i<v.size();i++)
+    {
+        for(j=i+1;j<v.size();j++)
+        {
+           if(v[j]-v[i]<=b)
+           {ctn=ctn+2;
+          
+           }
+        }
+    }
+    cout<<ctn<<endl;
+    return 0;
+ 
+ 
+}
