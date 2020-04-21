@@ -1,0 +1,30 @@
+So, Here in this problem we have to find only one pair if it is pair or the one element if that is even and belongs that set.
+We can simply do this in consideration of the problem itself finding loophole in the problem by implementing the following code.
+
+#include<bits/stdc++.h>
+using namespace std;
+int t;
+int main() 
+{
+	cin>>t;
+	while(t--)
+	{
+		int ans=0,n=0;cin>>n;
+		for(int i=1;i<=n;i++)
+		{
+			int x;cin>>x;
+			if(x%2==0)ans=i;
+		}
+		if(ans) printf("1\n%d\n",ans);
+		else 
+		{
+			if(n==1)cout<<"-1\n";
+			else cout<<"2\n1 2\n";
+		}
+	}
+	return 0;
+} 
+
+
+Here we output the first even integer if it is present or if even integer is not present we simply return that the first two indexes are 
+containing the odd numbers and will give the sum as even so, we just output indexes 1 and 2 lol that's dammn funny about this problem.
