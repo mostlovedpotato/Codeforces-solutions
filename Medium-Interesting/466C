@@ -1,0 +1,26 @@
+In this problem which seems quite easy at first glance and after reading and then working on it will make you think it is quite complicated.
+So, Here the question states that it wants three continous parts of the array which have equal sum.
+So we will calculate total sum of the array and then along with we maintain one simple cumulative array as we go along.
+Then next step would be we will divide the sum by ' 3 ' if it is divisible then ok otherwise the answer is ' 0 ' .
+and so on for reference here is the link to the page for explanation.
+
+https://www.geeksforgeeks.org/count-the-number-of-ways-to-divide-an-array-into-three-contiguous-parts-having-equal-sum/
+
+Get throught the whole tutorial that will help you a lot
+
+#include<iostream>
+using namespace std;
+long long  a[500005],n,ans,x;
+int main(){
+  cin>>n;
+  for(int i=0;i<n;i++){
+    cin>>a[i];
+    a[i]=a[i-1]+a[i];}
+   for(int i=0;i<n-1;i++){
+      if(a[i]*3==a[n-1]*2)
+           ans+=x;
+      if(a[i]*3==a[n-1])
+           x++;
+      }
+  cout<<ans;
+}
