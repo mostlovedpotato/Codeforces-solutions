@@ -1,0 +1,2 @@
+#include <bits/stdc++.h>
+int main(){int a,b;scanf("%d %d",&a,&b);int r=7-std::max(a,b);printf("%d/%d",r/std::__gcd(r,6),6/std::__gcd(r,6));}
