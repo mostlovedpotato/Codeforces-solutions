@@ -1,0 +1,56 @@
+So, In this problem we are about to check within registration system if the name exists if not we just append a characteristic numeral at 
+the end as stated in the problem so, we can get through like this....
+
+#include<bits/stdc++.h>
+using namespace std;
+ 
+int main () {
+	ios::sync_with_stdio(false);
+	cin.tie(0);
+ 
+	int n;
+	cin >> n;
+	string s;
+	unordered_map<string, int> mp;
+	for (int i = 0; i < n; i++) {
+		cin >> s;
+		if (mp.find(s) == mp.end()) {
+			mp[s] = 0;
+			cout << "OK\n";
+		} else {
+			cout << s << ++mp[s] << '\n';
+		}
+	}
+	return 0;
+}
+
+Here we used the unordered_map in c++ for storing the info which is quite easy to retreive otherwise
+
+#include<bits/stdc++.h>
+using namespace std;
+int n;
+string s;
+unordered_map < string,int > m;
+main(){
+ cin>>n;
+ while(n--){
+ cin>>s;if(m[s]++)cout<<s<<m[s]-1;
+ else cout <<"OK";
+ cout<<endl;}
+ }
+ 
+ or using map 
+ 
+#include<bits/stdc++.h>
+using namespace std;
+int n;
+string s;
+map < string,int > m;
+main(){
+ cin>>n;
+ while(n--){
+ cin>>s;if(m[s]++)cout<<s<<m[s]-1;
+ else cout <<"OK";
+ cout<<endl;
+}
+}
