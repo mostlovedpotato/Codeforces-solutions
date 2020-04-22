@@ -1,0 +1,14 @@
+So, In this problem we just have to find the sum between the ' a ' ranked term to ' b ' ranked term so we go like,
+
+#include<iostream>
+using namespace std;
+int main(){
+int i,n,k[100],a,b,s=0;
+cin>>n;
+for(i=1;i<n;i++)
+  cin>>k[i];
+  cin>>a>>b;
+for(i=a;i<b;i++)
+  s+=k[i];
+cout<<s;
+}
