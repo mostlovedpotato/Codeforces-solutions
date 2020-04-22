@@ -1,0 +1,12 @@
+So, Here in this problem we are just about to check if the given number is a triangular number.
+
+#include <iostream>
+ 
+int main()
+{
+    int n;
+    std::cin >> n;
+    for (int i = 0; n > 0; ++i)
+        n -= i;
+    std::cout << (n == 0 ? "YES" : "NO");
+}
