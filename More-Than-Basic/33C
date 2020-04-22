@@ -1,0 +1,20 @@
+Here, we are free to multiply with -1 either from one side or both sides if needed but this will create overlapping array for to be 
+maximum sum it can be just sum of modulus of all elements so we have it as
+
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    int a[n],ans=0,sum=0,s=0;
+    for(int i=0;i<n;++i)
+    {
+        cin>>a[i];
+        s+=a[i];
+        sum+=a[i];
+        if(sum<0)sum=0;
+        ans=max(ans,sum);
+     }
+    cout<<2*ans-s<<endl;
+}
