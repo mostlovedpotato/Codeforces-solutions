@@ -1,0 +1,7 @@
+So, this is quite easy or I could say easiest lol
+
+#include<iostream>
+main() {
+ unsigned N; std::cin >> N;
+ std::cout << (N%2 || N<4 ? "NO":"YES");
+}
