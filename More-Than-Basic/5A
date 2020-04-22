@@ -1,0 +1,27 @@
+So, Here in this problem we have to output the number which is the length of the string in chat and multiplied by the number of users present
+in the chat at that point of time so we keep track of the number of persons presnt in the chat at any time.
+
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int sum, i, l, j, num;
+    char str[200];
+    sum = 0;
+    num = 0;
+    while(gets(str)){
+        if(str[0] == '+')
+            num ++;
+        else if(str[0] == '-')
+            num --;
+        else{
+            l = strlen(str);
+            i = 0;
+            while(str[i] != ':')
+                i ++;
+            sum += (num * (l - i - 1));
+        }
+    }
+    printf("%d\n", sum);
+    return 0;
+}
