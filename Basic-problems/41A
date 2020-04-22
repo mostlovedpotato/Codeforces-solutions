@@ -1,0 +1,13 @@
+So, Here in this problem we are just to reverse the string which is the input and compare those two if they are reverse of each other then 
+it's ok otherwise ' No '
+
+#include<stdio.h>
+#include<string.h>
+int main(){
+	char s1[101],s2[101];
+	scanf("%s %s",s1,s2);
+	puts(strcmp(s1,strrev(s2)) ? "NO" : "YES");
+  }
+  .
+  
+  Using ternary operator and strcmp and strrev
