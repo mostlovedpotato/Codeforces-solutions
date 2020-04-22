@@ -1,0 +1,62 @@
+So this problems at first glance might seem like will have long code to write but see. If we sort out the array we are just left with the 
+sum of first ' m ' terms in the series of numbers .
+like
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int i,n,m,a[100],k;
+
+main (){
+    
+    cin>>n>>m;
+    k=n;
+    while(n--)
+      cin>>a[n];
+    sort(a,a+k);
+    for(n=0;i<m;i++)if(a[i]<0)n-=a[i];
+      cout<<n;
+}
+
+
+
+or simply by using vecotr
+
+
+#include<iostream>
+#include<algorithm>
+#include<vector>
+#include<iterator>
+ 
+using namespace std;
+ 
+int main()
+{
+	int n,m;
+	cin>>n>>m;
+	vector<int> v;
+	for(int i=0 ; i<n ; i++)
+	{
+		int temp;
+		cin>>temp;
+		v.push_back(temp);
+	}
+ 
+	auto t = v.begin();
+	sort(v.begin(),v.end());
+	
+	int sum = 0 ;
+ 
+	for(int i=0  ; i<m ; i++)
+	{
+		if(sum> (sum+v[i]))
+		{
+			sum+=v[i];
+		}
+	}
+ 
+	cout<< -1 * sum;
+ 
+ 
+}
