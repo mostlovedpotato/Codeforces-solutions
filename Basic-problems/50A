@@ -1,0 +1,14 @@
+Here we are just to find the no.. of smaller rectangles that can be fit into the larger square that without overlapping that's all.
+
+#include<cstdio>
+int main()
+{
+	int x,y;
+	scanf("%d %d",&x,&y);
+	printf("%d",x*y/2);
+}
+
+or 
+
+#include <iostream>
+int main(){int n,m; std::cin>>n>>m; std::cout<<n*m/2;}
