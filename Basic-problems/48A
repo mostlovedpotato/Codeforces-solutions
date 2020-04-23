@@ -1,0 +1,23 @@
+Here in this problem we just have to check on the conditions if it ' rss ' then first player win as so on so we use normal ternary operator 
+and wirte our solution as 
+
+
+ 
+#include<iostream>
+#include<string>
+#include<set>
+#include<algorithm>
+#include<cmath>
+using namespace std;
+int main()
+{
+	string s[3],x;
+	for (int i = 0; i < 3; i++)
+	{
+		cin >> s[i];
+		x += s[i].at(0);                       // as our inputs are like rock paper ans scissor we are only taking the first char 
+	}
+	cout << (x == "prr" || x == "rss" || x == "spp" ? "F"
+		: x == "rpr" || x == "srs" || x == "psp" ? "M"
+		: x == "rrp" || x == "ssr" || x == "pps" ? "S" : "?");
+}
