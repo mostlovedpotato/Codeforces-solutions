@@ -1,0 +1,22 @@
+So, Here we first compare the no. of characters which are in upper and lower case and see which have heigher no. compared .
+and then convert all to that case.
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char a[100],i,t=0,k=0;
+    gets(a);
+    for(i=0;i<strlen(a);i++)
+    {
+        if(a[i]>=65&&a[i]<=90)
+        t++;
+    if(a[i]>=97&&a[i]<=122)
+        k++;
+        }
+    if(t>k)
+        strupr(a);
+    else
+        strlwr(a);
+    puts(a);
+}
