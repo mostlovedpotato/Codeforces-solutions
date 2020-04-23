@@ -1,0 +1,24 @@
+Here we loop through all square in order of rows and then columns and then we check if all the squares in that column that is ' 8 ' squares
+are black then we have one column incremented otherwise we would tell the no. of squares colored equals the no. of rows incremented.
+
+#include <bits/stdc++.h>
+using namespace std;
+    char a[8];
+    int b,c,d;
+ 
+int main()
+{
+   
+	for(int i=0;i<8;i++)
+	{
+		d=0;
+		for(int j=0;j<8;j++)
+		{
+			cin>>a[j];
+			if(a[j]=='B')d++;
+		}
+		if(d==8)b++;
+		else c=d;
+	}
+	cout<<b+c<<endl;
+}
