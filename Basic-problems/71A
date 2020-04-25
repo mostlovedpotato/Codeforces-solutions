@@ -1,0 +1,16 @@
+Here, In this problem we just have to print the first letter then len - 2 and then last letter if the word is having length greater than
+10  so ,
+
+
+#include<bits/stdc++.h>
+using namespace std;
+main()
+{
+  string s;
+  cin>>s;
+  while(cin>>s)
+    if(s.length()<11)
+      cout<<s<<endl;
+    else 
+      cout<<s[0]<<s.length()-2<<s[s.length()-1]<<endl;
+}
