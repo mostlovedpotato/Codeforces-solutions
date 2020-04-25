@@ -1,0 +1,26 @@
+Here, In this problem we have to make the given sequence increasing without any sorting. So , we here will try to make it increasing as we
+go along getting the inputs so ,as the input comes we check if it is greater than previous otherwise we will add multiple of differnce and 
+the given integer which compensates the differnce and the multiple we will add it to our final answer and we will repeat this 
+
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int n=0,j,d,a,k=0,b;
+	cin>>j;
+	cin>>d;
+	cin>>a;
+	for(int i=1;i<j;i++)
+	{
+		cin>>b;
+		if(a>=b)
+		{
+			n=(a-b+d)/d;
+			b+=n*d;
+			k+=n;
+		}
+		a=b;
+	}
+	cout<<k;
+}
