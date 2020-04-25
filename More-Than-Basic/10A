@@ -1,0 +1,26 @@
+Here, In this problem we have to check how much power the laptop is using as the laptop is switiching his modes out of the intervals
+within the intervals it is constant power consumption as p1 but within intervals if the interval is
+greater than t1 then we would say power consumed in first mode at first would be p1*min(len,t1) len if len is less than time itself
+and within second mode we can go like it is power consumed if it is greater than t2 also we will gof p3 mode otherwise within p2 mode 
+it is having time as len - t1  for p3 it is simply the time itself if it is within p3 or zero otherwise
+so the solution is like below.
+
+#include<iostream>
+using namespace std;
+ 
+int main(){
+	int n,p1,p2,p3,t1,t2;
+	cin>>n>>p1>>p2>>p3>>t1>>t2;
+	int a[101][2];
+	for(int i=0;i<n;i++)
+		cin>>a[i][0]>>a[i][1];
+	int num=a[0][1]-a[0][0];
+	num*=p1;
+	for(int i=1;i<n;i++){
+		num+=(a[i][1]-a[i][0])*p1;
+		int len=a[i][0]-a[i-1][1];
+		num=num+p1*min(len,t1)+p2*min(max(0,len-t1),t2)+p3*max(0,len-t1-t2);
+	}
+	cout<<num;
+	return 0;
+}
