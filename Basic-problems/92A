@@ -1,0 +1,19 @@
+Here, In this problem we have to just distribute the chips in the circle until the time comes when he can't give the next man sufficient 
+candies equal to the index.
+
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int n,m,i=1;
+	cin>>n>>m;
+	while(m>=i)
+	{
+		m -= i;
+		if(i==n)
+			i=0;
+		i++;
+	}
+	cout<<m;
+}
