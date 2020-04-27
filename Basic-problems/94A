@@ -1,0 +1,41 @@
+Here, In this problem we can use map effectively as we have to associate each string to a number .
+
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	string s;
+	cin >> s;
+	unordered_map<string,int>m;
+	for(int i=0;i<10;i++){
+	string t;
+	cin >> t;
+	m[t]=i;
+	}string ans;
+	for(int i=0;i<80;i+=10){
+    string x=s.substr(i,10);
+    cout << m[x];
+	}
+	}
+  
+  
+  or
+  
+  #include<bits/stdc++.h>
+using namespace std;
+ 
+int main () {
+	string str, s;
+	cin>>str;
+	map<string,char>m;
+	for(int i=0;i<10;i++){
+		cin>>s;
+		m[s]=i+'0';
+	}
+	string ans;
+	for(int i=0;i<80;i+=10){
+		ans+=m[str.substr(i,10)];
+	}
+	cout<<ans<<'\n';
+ 	return 0;
+}
