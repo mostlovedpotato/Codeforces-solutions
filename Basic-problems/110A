@@ -1,0 +1,13 @@
+In this problem we have to check if the number of times the 7 or 4 occurs is 7 or 4 . lol 
+
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+	string p;cin>>p;
+	int ln=0;
+	for(auto l:p){
+		if(l=='7' || l=='4') ln++;
+	}
+	if(ln==4 || ln==7) cout<<"YES";
+	else cout<<"NO";
+}
