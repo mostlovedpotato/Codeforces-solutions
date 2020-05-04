@@ -1,0 +1,27 @@
+In this problem we have to find the minimum distance the photographer have to move in order to have clicked all n players.
+we will see the path of the all of players and then we see for the max point of the left end of all the players and the 
+min of the right end of the path of all players. 
+Now we see if the left point is right to the right point then output -1 
+and in other cases we find if the nearest point is left side or right side and that is point upto which he have to move.
+
+
+#include<bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+	int n,x;
+	cin>>n>>x;
+	int a,b,l=0,r=1000;
+	while(n--)
+	{
+		cin>>a>>b;
+		if(a>b)swap(a,b);
+		l=max(l,a);
+		r=min(r,b);
+	}
+	if(x>=l&&x<=r)cout<<0<<endl;
+	else if(l>r)cout<<-1<<endl;
+	else cout<<min(abs(x-l),abs(x-r))<<endl;
+	return 0;
+}
