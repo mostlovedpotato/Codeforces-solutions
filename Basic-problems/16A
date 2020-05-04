@@ -1,0 +1,31 @@
+Here, In this problem we have to check if the flag meets standard condition for that we have to check given conditions.
+we first check if that have all row elements similar if not we return 
+we check if adjacent rows are similar while in two for loops then out of one loop if similar then we return.
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+int i,j,k,n,m,d,l;
+cin>>n>>m;
+char a[n][m],ch;
+for(i=0;i<n;i++){
+	for(j=0;j<m;j++)
+	{
+		cin>>ch;
+		a[i][j]=ch;
+		if(a[i][j]!=a[i][0])
+		{
+			cout<<"NO\n";
+			return 0;
+		}
+	}
+	if(i!=0 && a[i][0]==a[i-1][0])
+	{
+		cout<<"NO\n";
+		return 0;
+	}
+}
+cout<<"YES\n";
+return 0;
+}
