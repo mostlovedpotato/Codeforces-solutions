@@ -1,0 +1,26 @@
+In this problem we just use pair and use the values as first thing. and then sort the thing.outta here.
+
+
+#include<bits/stdc++.h>
+using namespace std;
+ 
+ 
+int main() {
+	int n,i,ans=0,m;
+	pair<int,int> x[25];
+	cin>>n>>m;
+	for (i=0;i<m;i++)
+		cin>>x[i].second>>x[i].first;
+ 
+	sort(x,x+m);
+	i=m-1;
+	while(n>0 && i>=0){
+		ans+=min(n,x[i].second)*x[i].first;
+		n-=x[i].second;
+	i--;
+	}
+	cout<<ans;
+ 
+ 
+	return 0;
+}
