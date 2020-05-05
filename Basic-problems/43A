@@ -1,0 +1,14 @@
+In this problem there are only two teams so we just wanna see who have won more no. of times so we will just take input vecor or array 
+of strings and then we sort that thing and then see who is at the middle position in the array or vector .
+
+#include<bits/stdc++.h>
+using namespace std;
+string s[128];
+int n,i;
+int main()
+{
+	cin>>n;
+	for(i=0; i<n; ++i)cin>>s[i];
+	sort(s,s+n);
+	cout<<s[n/2];
+}
