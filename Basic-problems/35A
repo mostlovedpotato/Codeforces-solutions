@@ -1,0 +1,26 @@
+In this problem we have to just swap or not even just go on updating if one of the index is of the cup having ball and that's all we are done.
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int i,a,b;
+	int k=3;
+	
+	freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+	
+	cin >>i;
+	while(k--)
+	{
+		cin >>a >>b;
+		if(a==i)
+			i=b;
+		else if(b==i)
+			i=a;
+	} 
+	cout <<i <<endl;
+	
+	return 0;
+}
+ 		
