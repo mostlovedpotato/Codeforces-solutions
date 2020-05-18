@@ -1,0 +1,17 @@
+I first thought about going for map in c++ as mapping each values to corresponding integers and then retreving the data as needed .
+But this below solution is awesome reduction in the extra memory and time .
+
+
+#include <bits/stdc++.h>
+using namespace std;
+int n;
+int i;
+string mon[12]{"January","February","March","April","May","June","July","August","September","October","November","December"};
+string s;
+int main()
+{
+    cin>>s;
+    cin>>n;
+    for (i=0;mon[i]!=s;i++){}
+    cout<<mon[(n+i)%12]<<endl;
+}
