@@ -1,0 +1,16 @@
+In this question we have to find the number of min replacements to make all the numbers eqaul we just substract the number of count of the 
+maximum occuring number in the sequence.
+
+#include<bits/stdc++.h>
+using namespace std;
+int n,s[4];
+int main(){
+cin>>n;
+for(int x,i=1;i<=n;i++){
+    cin>>x;
+    s[x]++;
+}
+cout<<n-max(s[1],max(s[2],s[3]));
+}
+ 
+ 
