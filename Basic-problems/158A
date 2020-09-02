@@ -1,0 +1,17 @@
+In this question we have to find the number of numbers which are greater than the number which is at position k
+
+#include<iostream>
+using namespace std;
+int n,k,i,j,a[51]; 
+int main()
+{cin>>n>>k;
+while(n>i)cin>>a[i++];
+while(a[j]&&a[j]>=a[k-1])++j;cout<<j;}
+
+
+in javascript we can do in better way
+
+let k = readline().split(" ")[1];
+let scores = readline().split(" ");
+let pass = scores[k-1];
+print(scores.filter( x => +x > 0 && +x >= +pass).length);
