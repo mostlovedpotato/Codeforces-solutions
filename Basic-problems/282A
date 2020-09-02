@@ -1,0 +1,27 @@
+In this problem we can do one thing just check at 2nd position in each line if it is + or - 
+#include <iostream>
+using namespace std;
+ 
+int main(){
+  int n,x=0;cin>>n;
+  while (n--) {
+    string s;cin>>s;
+    if (s[1]=='+') x++;
+    else x--;
+  }
+  cout<<x;
+}
+
+
+
+in javascript we better just use eval fucntionality
+
+
+n = +readline();
+ 
+X = 0;
+ 
+while(n--){
+    eval(readline())
+}
+print(X)
