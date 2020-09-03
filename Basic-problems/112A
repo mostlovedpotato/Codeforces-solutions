@@ -1,0 +1,30 @@
+https://codeforces.com/problemset/problem/112/A
+
+In this problem we just have to find the string which is greater so we will just convert 
+it into the lowercase whole string and then we will simply compare the strings 
+
+#import<bits/stdc++.h>
+#include<iostream>
+using namespace std;
+int i;
+main(){
+    string a,b; 
+    cin>>a>>b;
+    for(i=0;i<a.size();i++)
+    {
+        a[i]=tolower(a[i]);
+        b[i]=tolower(b[i]);
+    }
+    cout<<(a>b?1:a<b?-1:0);
+}
+
+also in js we will just need to compare two lines
+
+var n = readline().toLowerCase();
+var m = readline().toLowerCase();
+if(n < m)
+	print("-1");
+else if(n > m)
+	print("1");
+else
+	print("0");
