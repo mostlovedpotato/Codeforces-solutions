@@ -1,0 +1,50 @@
+Here in this question we just have paint the house 
+the color which is occured most times already so we see that color and then paint
+every first occurence of next paint which will automatically paint next k houses.
+Here we don't have to think about the l-r+1 so in terms of limits.
+Just go traditionally as it don't depent.
+
+so ans would be.
+
+#include<iostream>
+#include<unordered_map>
+using namespace std;
+int mostFrequent(int a[],int n){
+    unordered_map<int,int> hash;
+    for(int i=0;i<n;i++){
+        hash[a[i]]++;
+    }
+    int max_count=0,res=-1;
+    for(auto i:hash){
+        if(max_count<i.second){
+            res=i.first;
+            max_count=i.second;
+        }
+    }
+    return res;
+}
+
+int main(){
+    int t;
+    cin>>t;
+    while(t--){
+        int a[1000];
+        int n,k;
+        cin>>n>>k;
+        for(int i=0;i<n;i++){
+            cin>>a[i];
+        }
+        int day=0;
+        int mocc=mostFrequent(a,n);
+        for(int i=0;i<n;i++){
+            if(a[i]!=mocc){
+                day++;
+                for(int j=0;j<k;j++){
+                    a[j+i]=mocc;
+                }
+            }
+        }
+        cout<<day<<endl;
+    }
+    return 0;
+}
