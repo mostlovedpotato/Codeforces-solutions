@@ -1,0 +1,26 @@
+The problem statement is simple and it can be concluded that we just want to calculate the 
+maximum distance point from the given point so all other can automatically can reach in that time.
+To know that time. 
+We simply consider rectangle and you can see that only the corner points can be the farthest from any possible point
+so, the distance would be simply either one of the to-vertex.
+which is easy enought to understand would be.
+max(x-1,n-x)+max(y-1,m-y)
+
+#include<iostream>
+#include<stdlib>
+
+using namespace std;
+
+int main(){
+    int t;
+    cin>>t;
+    while(t--){
+        int n,m;
+        int x,y;
+        cin>>n>>m;
+        cin>>x>>y;
+        cout<<max(x-1,n-x)+max(y-1,m-y)<<endl;
+        return 0;
+        
+    }
+}
